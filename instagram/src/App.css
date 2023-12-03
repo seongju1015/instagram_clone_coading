@@ -1,0 +1,322 @@
+.App {
+  text-align: center;
+}
+.whole_body{
+  position:absolute;
+  width: 1920px;
+  height: 1080px;
+}
+.body{
+  position:absolute;
+  width: 935px;
+  height: 1080px;
+  left: 492px;
+}
+
+.home_button{
+  position:absolute;
+  background-color: white;
+  border:none;
+  top: 11px;
+  left: 770px;
+  cursor: pointer;
+}
+
+.header_heart{
+  position:absolute;
+  background-color: white;
+  border:none;
+  top: 3px;
+  left:855px;
+  cursor: pointer;
+}
+.plus_logo{
+  position : absolute;
+  width:22px;
+  height:22px;
+  top:16px;
+  left:825px;
+  cursor: pointer;
+}
+
+.mini_profile{
+  position : absolute;
+  width:22px;
+  height:22px;
+  top:16px;
+  left:915px;
+  border-radius:22px;
+  cursor: pointer;
+}
+
+.profile{
+  position : absolute;
+  width: 322px;
+  height:150px;
+  padding: 0px, 101px, 0px, 71px;
+  gap: 10px;
+}
+
+.main_profile{
+  position:absolute;
+  width: 150px;
+  height: 150px;
+  top: 120px;
+  left: 100px;
+  border-radius: 150px;
+}
+
+.profile_text{
+  position:absolute;
+  width: 613px;
+  height: 150px;
+  top:120px;
+  left:400px;
+  padding: 14px, 0px, 14px, 0px;
+}
+.userProfileName{
+  position:absolute;
+  top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.profileEditButton{
+  width: 88px;
+  height: 30px;
+  position:absolute;
+  left: 80px;
+  top: 10px;
+  background-color: white;
+  border-color: grey;
+}
+.profileEditIcon{
+  position:absolute;
+  left: 200px;
+  top: 6px;
+}
+.post_mini{
+  position:absolute;
+  top: 30px;
+}
+.post{
+  position: absolute;
+  width: 9px;
+  height: 18px;
+  top: 192px;
+  left: 453px;
+}
+.post_num{
+  position: absolute;
+  width: 9px;
+  height: 18px;
+  top: 80px;
+  left: 45px;
+}
+.follower_num{
+  position: absolute;
+  width: 9px;
+  height: 18px;
+  top: 80px;
+  left: 130px;
+}
+.follow_num{
+  position: absolute;
+  width: 9px;
+  height: 18px;
+  top: 80px;
+  left: 210px;
+}
+.post_mini{
+  position: absolute;
+  top:80px;
+  
+}
+.follower{
+  position: absolute;
+  top:80px;
+  left:85px;
+}
+.follow{
+  position: absolute;
+  top:80px;
+  left:165px;
+}
+
+.introduceMessage{
+  position:absolute;
+  top: 120px;
+  font-size: large;
+}
+.header_menu{
+  position: absolute;
+  width: 935px;
+  height: 53px;
+  top: 267px;
+  left:-492px;
+}
+.peed1{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 320px;
+  left: -492px;
+  padding: 681px, 0px, 0px, 411px;
+}
+.peed2{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 320px;
+  left: -173px;
+  padding: 100px, 25px, 100px, 25px;
+}
+.pard_logo{
+  position: absolute;
+  width: 260px;
+  height: 59px;
+  top: 440px;
+  left: -150px;
+}
+.peed3{
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 320px;
+  left: 142px;
+}
+.sideMeta{
+  margin-top: 30vh;
+}
+.meta{
+  width:13rem;
+  height:13rem;
+}
+.middle_profile{
+  float:left;
+    margin-left: 5%;
+    margin-top: 4%;
+    width:38px;
+    height:38px;
+    border-radius:22px;
+}
+.profile-image{
+  float:left;
+    margin-left: 5%;
+    margin-top: 4%;
+    width:38px;
+    height:38px;
+    border-radius:22px;
+}
+.form_label{
+  font-weight: 700;
+}
+.form_size1{
+  margin-left:30px;
+  margin-bottom: 30px;
+  width: 355px;
+  height: 32px;
+}
+.form_size2{
+  margin-left:30px;
+  margin-bottom: 30px;
+  width: 355px;
+  height: 64px;
+}
+.submitButton{
+  display:flex;
+  justify-content: center;
+  margin-top:20px;
+}
+.submit_button{
+  width:60px;
+  height:30px;
+  background-color:dodgerblue;
+  color:white;
+  border:none;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.submit_button:disabled {
+  opacity: 0.6; /* disabled 상태일 때 좀 티나게 해줌 */
+  cursor: not-allowed; /* 커서를 표시xx */
+}
+.top_from{
+  text-align: left;
+  margin-left: 30%;
+  margin-bottom: 10%;
+}
+#atag_change_profile{
+  
+  color:dodgerblue;
+}
+
+.redheart_icon{
+  margin-left:8px;
+  margin-top:6px;
+  padding-bottom: 8px;
+}
+.heart_button{
+  background-color: white;
+  border-style: none;
+  cursor: pointer;
+}
+#sharePost{
+  margin-bottom: 30%;
+}
+.comment_heart_button{
+  background-color: white;
+  border-style: none;
+  cursor: pointer;
+  float:right;
+  margin-top:-5%;
+  margin-right:4%;
+}
+.home_whole_body{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  height: 100%;
+}
+.home_body{
+  width: 935px;
+  height: 1080px;
+  left: 492px;
+}
+.home_home_button{
+  
+  background-color: #fafafa;
+  margin-top: 2vh;
+  margin-right: 3%;
+  border:none;
+  cursor: pointer;
+}
+
+.home_header_heart{
+  background-color: #fafafa;
+  border:none;
+  cursor: pointer;
+  margin-left: 1%;
+  margin-top: 1vh;
+  padding:0%;
+}
+.home_plus_logo{
+  width:22px;
+  height:22px;
+  margin-top: 2vh;
+  margin-left: 1%;
+  cursor: pointer;
+}
+
+.home_mini_profile{
+  width:26px;
+  height:26px;
+  margin-top:2vh;
+  margin-left: 3%;
+  border-radius:22px;
+  cursor: pointer;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafafa;
+}
