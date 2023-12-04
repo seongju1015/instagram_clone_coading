@@ -1,8 +1,9 @@
 import React, {useState,useContext} from "react";
 import axios from 'axios';
-import {MyContext} from './App';
+import {MyContext, MyDataState} from './App';
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
+import {useRecoilState} from 'recoil';
 import './App.css';
 
 const InstaLogo = styled.div`
@@ -85,9 +86,11 @@ const FormDetail = styled.div`
 `
 
 function EditProfile(){
-    const {MyData, setUser} = useContext(MyContext);/*useCOntext로 MyContext값들을 가져옴 */
+
+    const [MyData, setUser] = useRecoilState(MyDataState);/*useCOntext로 MyContext값들을 가져옴 */
     /*여기서 값을 수정할 수 있는 변수 선언 위해 useState사용 
     값 변경 유지를 위해서 Conext로 받아옴!!! 전체에 적용되는 값이라 사용*/
+
     const [userName, setUserName] = useState(MyData.name) /*props로 초기이름 설정 */
     const [userAge, setUserAge] = useState(MyData.age)
     const [userPart, setUserPart] = useState(MyData.part)

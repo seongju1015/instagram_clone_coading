@@ -3,6 +3,8 @@ import {MyContext} from './App';
 import './App.css';
 import { Link } from 'react-router-dom';
 import styled from "styled-components";
+import {useRecoilState, useRecoilValue} from 'recoil';
+import {MyDataState} from './App';
 
 
 const ProfileIntroduce = styled.div`
@@ -14,7 +16,20 @@ const ProfileIntroduce = styled.div`
 `;
 
 function Profile(){
-const {MyData,setUser} = useContext(MyContext);
+const [MyData, setUser] = useRecoilState(MyDataState);
+const updateMyData = () =>{
+  setUser({
+      name:MyData.name,
+      age:MyData.age,
+      part:MyData.part,
+      imgURL:MyData.imgURL,
+      introduce:MyData.introduce,
+  });
+};
+if (!MyData || !MyData.name) {
+  return <div>Loading...</div>; // 데이터가 로드 중이라면 로딩 중이라는 문구를 표시하거나 다른 처리를 할 수 있습니다.
+}
+console.log(MyData.name);
 
     return(
         <div className = "profile">

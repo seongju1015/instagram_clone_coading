@@ -4,7 +4,10 @@ import MediaQuery from "react-responsive";
 import { MyContext } from "./App";
 import {Link} from 'react-router-dom';
 import styled from "styled-components";
+import { useRecoilState } from 'recoil';
 import './App.css';
+import { MyDataState, likeCountState, isLikedState, CommentsState } from './App';
+
 
 const InstaLogo = styled.div`
     display:flex;
@@ -180,12 +183,19 @@ const FooterDetail = styled.div`
 `
 
 function Home(){
-    const {MyData, setUser,
+    /*const {MyData, setUser,
         likeCount,setLikeCount,
         isLiked, setIsLiked,
-        comments, setComments} = useContext(MyContext);
+        comments, setComments} = useRecoilState(MyContext);
         /* 밑에서 쓰이는 useState 변수들을 모두 context에 넣어서  useContext로 사용
         이렇게 하면 props없이 변경된 값이 다른 페이지에서도 바로 적용 가능함.*/
+
+    const [MyData, setUser] = useRecoilState(MyDataState);
+    const [likeCount, setLikeCount] = useRecoilState(likeCountState);
+    const [isLiked, setIsLiked] = useRecoilState(isLikedState);
+    const [comments, setComments] = useRecoilState(CommentsState);
+    console.log(likeCount);
+    console.log(MyData.name);
 
     const [commentLikeCount, setCommentLikeCount] = useState(0); /**댓글 좋아요 수 설정 */
     const [newCommentLikeCount, setNewCommentLikeCount] = useState(0); /**새로운 댓글 좋아요 수 설정  */

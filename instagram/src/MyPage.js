@@ -14,7 +14,7 @@ const InstaLogo = styled.div`
     margin-top:2%;
 `;
 
-function MyPage(props){
+function MyPage(){
     return(
         <div className = "container">
             <div className = "body">
@@ -31,7 +31,7 @@ function MyPage(props){
                 </InstaLogo>
 
             <div>
-                <Profile user={props.user}/>
+                <Profile/>
             </div>
 
             <div>
