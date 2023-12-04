@@ -93,7 +93,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/edit-profile" element={<EditProfile />} />
-
           <Route path="/" element={<MyPage />} />
           <Route path="/home" element={<Home />} />
         </Routes>
