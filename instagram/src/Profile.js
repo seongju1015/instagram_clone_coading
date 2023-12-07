@@ -17,6 +17,7 @@ const ProfileIntroduce = styled.div`
 
 function Profile(){
 const [MyData, setUser] = useRecoilState(MyDataState);
+/* useRecoilState 이용해서 정보 가져옴. */
 const updateMyData = () =>{
   setUser({
       name:MyData.name,

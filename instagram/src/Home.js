@@ -194,8 +194,11 @@ function Home(){
     const [likeCount, setLikeCount] = useRecoilState(likeCountState);
     const [isLiked, setIsLiked] = useRecoilState(isLikedState);
     const [comments, setComments] = useRecoilState(CommentsState);
+    /*리코일로 App.js에 선언해놨던 것들 가져와서 사용함. useRecoilState뒤에 오는 괄호안에 export해준 
+    값을 넣으면 언제 어디서든 접근 가능하고 수정 가능. */
     console.log(likeCount);
     console.log(MyData.name);
+    /*값 넘어오는 지 확인 차 콘솔 */
 
     const [commentLikeCount, setCommentLikeCount] = useState(0); /**댓글 좋아요 수 설정 */
     const [newCommentLikeCount, setNewCommentLikeCount] = useState(0); /**새로운 댓글 좋아요 수 설정  */

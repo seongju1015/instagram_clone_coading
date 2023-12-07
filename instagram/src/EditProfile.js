@@ -87,9 +87,8 @@ const FormDetail = styled.div`
 
 function EditProfile(){
 
-    const [MyData, setUser] = useRecoilState(MyDataState);/*useCOntext로 MyContext값들을 가져옴 */
-    /*여기서 값을 수정할 수 있는 변수 선언 위해 useState사용 
-    값 변경 유지를 위해서 Conext로 받아옴!!! 전체에 적용되는 값이라 사용*/
+    const [MyData, setUser] = useRecoilState(MyDataState);/*useRecoilState로 App.js에 있던 MyData값 가져옴 */
+    /*유즈 리코일 스테이트는 유즈스테이트처럼 값을 변경할 수 있지만, 전역적으로 값이 바뀜.*/
 
     const [userName, setUserName] = useState(MyData.name) /*props로 초기이름 설정 */
     const [userAge, setUserAge] = useState(MyData.age)

@@ -37,16 +37,10 @@ export const CommentsState = atom({
 });
 
 function App() {
-  /*const [MyData, setUser] = useState({
-    name:'',
-    age:'',
-    part:'',
-    imgURL:'',
-    introduce:'',
-  });
-  /** 저장할 기본적인 data값들. axios로 기본값 설정 후 Context를 이용해서 바꿔줌 값들임. */
 
   const [MyData, setUser] = useRecoilState(MyDataState);
+  /* 리코일로 MyData 와 setUser라는 걸 어디서든 쓰고 변경할 수 있게 함.
+  이 안에는 MyDataState 내용이 MyData에 들어있음. 고치고 싶으면 setUser 쓰면 됌 */
 
   const [data, setData] = useState();
   useEffect(() => {
@@ -72,23 +66,14 @@ function App() {
   const [likeCount, setLikeCount] = useRecoilState(likeCountState);
   const [isLiked, setIsLiked] = useRecoilState(isLikedState);
   const [comments, setComments] = useRecoilState(CommentsState); /**댓글 목록 상태 */
-  /** useState값을 Context사용해서 변경하기 위해서 App.js에 선언해놓음. */
+  /** 리코일로 likeCount, isLiked, comments도 다른 곳에서 쓰고 변경할 수 있게함. 
+   * 마찬가지로 이 안에는 각각 likeCountState, isLikedState, CommentsState의 정보가 들어가있음.
+   */
   console.log(MyData.name);
+  //악시오스에서 데이터 잘 받아오는지 확인 차 점검.
 
   return (
-    // <MyContext.Provider value={{MyData, setUser,
-    // likeCount,setLikeCount,
-    // isLiked, setIsLiked,
-    // comments, setComments}}>
-    //   {/** Context사용 위해서 Provider 사용 후 value값으로 변경 되어야하는 값들 넣어줌. */}
-    //   <Router>
-    //     <Routes>
-    //       <Route path="/edit-profile" element={<EditProfile />} />
-    //       <Route path="/" element={<MyPage />} />
-    //       <Route path="/home" element={<Home />} />
-    //     </Routes>
-    //   </Router>
-    // </MyContext.Provider>
+   
     <RecoilRoot>
       <Router>
         <Routes>
@@ -97,7 +82,6 @@ function App() {
           <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
-
     </RecoilRoot>
 
   );
