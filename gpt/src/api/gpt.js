@@ -16,7 +16,7 @@ export const CallGPT = async () => {
         },
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: "Hello world"}],
+            messages: [{role: "user", content: "What is personal branding?"}],
             temperature: 0.7,
             max_tokens: 1_000,
         }),
